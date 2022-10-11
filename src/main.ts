@@ -1,11 +1,6 @@
-import * as Vue from 'vue';
 import { LIB_NAME } from './configs/subApp';
 import { libReady, isSubApp } from 'hel-lib-proxy';
 // import { preFetchLib } from 'hel-micro';
-
-if (Vue.config) {
-  Vue.config.productionTip = false;
-}
 
 (async function () {
   // const enableCustom = false;
