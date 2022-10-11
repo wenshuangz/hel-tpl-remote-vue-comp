@@ -1,6 +1,6 @@
 {
-  "name": "hel-tpl-remote-vue-comps",
-  "appGroupName": "hel-tpl-remote-vue-comps",
+  "name": "sy-hel-tpl-remote-vue-comps",
+  "appGroupName": "sy-hel-tpl-remote-vue-comps",
   "main": "hel_proxy/entry.js",
   "module": "hel_proxy_es/entry.js",
   "types": "src/entrance/libTypes.ts",

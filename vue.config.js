@@ -11,17 +11,25 @@ module.exports = {
   productionSourceMap: true,
   outputDir: helDevUtils.cst.HEL_DIST_DIR,
   configureWebpack: (config) => {
-    console.log(
-      "config.module.rules >>> ",
-      JSON.stringify(config, function (k, v) {
-        if (v instanceof RegExp) {
-          return v.toString();
-        }
-        return v;
-      })
-    );
-    config.externals = config.externals || {};
-    config.externals.vue = "Vue";
+    // console.log(
+    //   "config.module.rules >>> ",
+    //   JSON.stringify(config, function (k, v) {
+    //     if (v instanceof RegExp) {
+    //       return v.toString();
+    //     }
+    //     return v;
+    //   })
+    // );
+    config.externals = {
+      vue: "LEAH_Vue",
+      "@vue/compiler-dom": "LEAH_VueCompilerDom",
+      "@vue/compiler-sfc": "LEAH_VueCompilerSfc",
+      "@vue/runtime-core": "LEAH_VueRunTimeCore",
+      "@vue/runtime-dom": "LEAH_VueRunTimeDom",
+      "@vue/server-renderer": "LEAH_VueServerRenderer",
+      "@vue/shared": "LEAH_VueShared",
+      "@vue/reactivity": "LEAH_VueReactivity",
+    };
     config.output.library = subApp.groupName;
     config.output.libraryTarget = "umd";
     config.output.jsonpFunction = subApp.jsonpFnName;

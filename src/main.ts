@@ -4,7 +4,7 @@ import { libReady, isSubApp } from 'hel-lib-proxy';
 
 (async function () {
   // const enableCustom = false;
-  // await preFetchLib('hel-tpl-remote-vue-comps2');
+  // await preFetchLib('sy-hel-tpl-remote-vue-comps2');
 
   const libProperties = await import('./entrance/libProperties');
   // 注意此处传递的是 default
